@@ -37,7 +37,8 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(), url);
     }
 
-    /*@Test(dataProvider = "NegativeLoginTestData", dataProviderClass = TestDataProvider.class)
+    /*
+    @Test(dataProvider = "NegativeLoginTestData", dataProviderClass = TestDataProvider.class)
     public void negativeLoginTests(String email, String password){
         String expectedUrl = "https://qa.koel.app/";
 
@@ -53,7 +54,8 @@ public class LoginTests extends BaseTest {
 
     }*/
 
-    /*@Test (enabled = false, dataProvider = "incorrectLoginProviders", dataProviderClass = BaseTest.class)
+    /*
+    @Test (enabled = false, dataProvider = "incorrectLoginProviders", dataProviderClass = BaseTest.class)
     public void loginEmptyEmailPasswordTest () {
         LoginPage loginPage = new LoginPage(driver);
 
@@ -63,5 +65,7 @@ public class LoginTests extends BaseTest {
         loginPage.providePassword("te$t$tudent");
         loginPage.clickSubmitBtn();
         Assert.assertEquals(driver.getCurrentUrl(), url);
-    }*/
+    }
+
+     */
 }
