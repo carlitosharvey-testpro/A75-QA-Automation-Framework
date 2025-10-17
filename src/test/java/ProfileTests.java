@@ -8,11 +8,14 @@ import pages.ProfilePage;
 
 public class ProfileTests extends BaseTest{
 
-    @Test
+    /*@Test
     private void updateProfileName() throws InterruptedException {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        ProfilePage profilePage = new ProfilePage(driver);
+        //LoginPage loginPage = new LoginPage(driver);
+        //HomePage homePage = new HomePage(driver);
+        //ProfilePage profilePage = new ProfilePage(driver);
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        ProfilePage profilePage = new ProfilePage(getDriver());
 
         loginPage.provideEmail("carlitos@testpro.io")
                 .providePassword("vjNWk4Hn")
@@ -30,5 +33,22 @@ public class ProfileTests extends BaseTest{
         Thread.sleep(2000);
         WebElement actualProfileName = getDriver().findElement(By.cssSelector("a.view-profile>span"));
         Assert.assertEquals(actualProfileName.getText(), randomName);
+    }*/
+
+    @Test
+    public void changeCurrentTheme(){
+        LoginPage loginPage = new LoginPage(getDriver());
+        HomePage homePage = new HomePage(getDriver());
+        ProfilePage profilePage = new ProfilePage(getDriver());
+
+        loginPage.provideEmail("carlitos@testpro.io")
+                 .providePassword("vjNWk4Hn")
+                 .clickSubmitBtn();
+
+        loginPage.clickProfileIcon();
+
+        profilePage.chooseVioletTheme();
+
+        Assert.assertTrue(profilePage.isVioletThemeSelected());
     }
 }
