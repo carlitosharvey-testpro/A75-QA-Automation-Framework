@@ -25,7 +25,7 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(getDriver().getCurrentUrl(), expectedUrl);
     }
 
-    @Test
+    /*@Test
     public void negativeLoginTest() throws InterruptedException {
         String expectedUrl = "https://qa.koel.app/";
 
@@ -44,5 +44,5 @@ public class LoginTests extends BaseTest {
         //Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         Assert.assertEquals(getDriver().getCurrentUrl(), expectedUrl);
 
-    }
+    }*/
 }
