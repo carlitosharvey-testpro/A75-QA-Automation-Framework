@@ -10,9 +10,7 @@ public class LoginTests extends BaseTest {
 
         //Objects
         //LoginPage loginPage = new LoginPage(driver);
-        //HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(getDriver());
-        HomePage homePage = new HomePage(getDriver());
 
         Thread.sleep(2000);
         //Steps
