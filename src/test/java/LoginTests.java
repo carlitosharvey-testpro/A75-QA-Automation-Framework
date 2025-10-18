@@ -12,18 +12,15 @@ public class LoginTests extends BaseTest {
         //LoginPage loginPage = new LoginPage(driver);
         LoginPage loginPage = new LoginPage(getDriver());
 
-        Thread.sleep(2000);
         //Steps
         loginPage.provideEmail("carlitos@testpro.io");
-        Thread.sleep(2000);
         loginPage.providePassword("vjNWk4Hn");
-        Thread.sleep(2000);
         loginPage.clickSubmitBtn();
         //Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         Assert.assertEquals(getDriver().getCurrentUrl(), expectedUrl);
     }
 
-    /*@Test
+    @Test
     public void negativeLoginTest() throws InterruptedException {
         String expectedUrl = "https://qa.koel.app/";
 
@@ -32,15 +29,12 @@ public class LoginTests extends BaseTest {
         //HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
-        Thread.sleep(2000);
         //Steps
         loginPage.provideEmail("invalid@testpro.io");
-        Thread.sleep(2000);
         loginPage.providePassword("invalidPassword");
-        Thread.sleep(2000);
         loginPage.clickSubmitBtn();
         //Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         Assert.assertEquals(getDriver().getCurrentUrl(), expectedUrl);
 
-    }*/
+    }
 }
